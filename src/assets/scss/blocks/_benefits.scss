@@ -1,0 +1,32 @@
+.benefits {}
+
+.benefits__inner {
+    width: 100%;
+    max-width: 1159px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.benefits__inner__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & dd {
+        font-weight: 700;
+        font-size: 62px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #5970f6;
+    }
+
+    & dt {
+        font-weight: 700;
+        font-size: 28px;
+        text-transform: lowercase;
+        color: #595856;
+        padding-top: 28px;
+    }
+}

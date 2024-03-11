@@ -1,0 +1,73 @@
+.case {}
+
+.case__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    padding: 60px 0;
+    column-gap: 50px;
+
+    & li {
+        padding: 30px;
+        border: 1px solid #fff;
+        border-radius: 16px;
+        box-shadow: 2px 4px 10px 0 rgba(34, 35, 36, 0.1);
+        background: #f1f1ec;
+        font-weight: 600;
+        font-size: 20px;
+        color: #636363;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            background: #fff;
+
+            position: absolute;
+            bottom: 13px;
+            right: 13px;
+            z-index: 1;
+        }
+    }
+}
+
+.case__video {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    column-gap: 70px;
+}
+
+.case__video__item {
+    box-shadow: 2px 4px 10px 0 rgba(34, 35, 36, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.case__link {
+    margin-top: 100px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #5970f6;
+    border-radius: 14px;
+    padding: 24px 0;
+    background: #fff;
+    color: #5970f6;
+}
+
+@media (hover: hover){
+    .case__link.project__link:hover{
+      background-color: white;
+    }
+  }
+  @media (hover: none){
+    .case__link.project__link:active{
+      background-color: white;
+    }
+  }
+
+.case__link.--arrow:after{
+    height: 25px;
+    content: url("data:image/svg+xml, %3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M14.0994%201.3999L0.899414%2014.5999%22%20stroke=%22#5970F6%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%20%20%3Cpath%20d=%22M4.83203%201.33325L14.0987%201.39859L14.1654%2010.6666%22%20stroke=%22#5970F6%22%20stroke-width=%221.7%22%20stroke-linecap=%22round%22%20stroke-linejoin=%22round%22%20/%3E%20%3C/svg%3E");
+}

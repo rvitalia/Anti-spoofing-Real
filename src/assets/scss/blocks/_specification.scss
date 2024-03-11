@@ -1,0 +1,19 @@
+.specification {}
+
+.technical__title {}
+
+.specification__inner {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    column-gap: 27px;
+
+    & li {
+        border: 1px solid #595856;
+        border-radius: 14px;
+        font-weight: 600;
+        font-size: 20px;
+        color: #636363;
+        padding: 30px 23px;
+    }
+}
