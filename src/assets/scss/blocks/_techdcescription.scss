@@ -9,6 +9,14 @@
     align-items: center;
     column-gap: 200px;
 
+
+    @include tablet{
+        grid-template-columns: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
     &>ul:first-child>li:first-child {
         border-top: 2px solid #9a9a9a;
     }
@@ -17,13 +25,19 @@
         border-bottom: 2px solid #9a9a9a;
         padding: 28px 0;
     }
+
+    & &__item:last-child{
+        @include tablet{
+            margin-top: 28px;
+        }
+    }
 }
 
 .techdcescription__inner__item {
     & li {
         font-weight: 600;
         font-family: var(--font-family);
-        font-size: 20px;
+        font-size: clamp(14px, 3vw, 20px);
         color: #595856;
 
         &>b{

@@ -6,27 +6,45 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    @include tablet{
+        display: flex;
+        grid-template-columns: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 50px;
+        row-gap: 30px;
+    }
+
+    @include mobile{
+        flex-direction: column;
+    }
 }
 
 .benefits__inner__item {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 
+    @include tablet{
+        flex: 1;
+    }
+
     & dd {
-        font-weight: 700;
-        font-size: 62px;
+        font-weight: 600;
+        font-size: clamp(28px, 7vw, 62px);
         text-transform: uppercase;
         text-align: center;
         color: #5970f6;
+        white-space: nowrap;
     }
 
     & dt {
-        font-weight: 700;
-        font-size: 28px;
+        font-weight: 400;
+        font-size: clamp(14px, 4vw, 28px);
         text-transform: lowercase;
         color: #595856;
         padding-top: 28px;
+        text-align: center;
     }
 }

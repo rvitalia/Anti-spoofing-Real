@@ -20,6 +20,7 @@ a {
   padding: 0;
   background-color: transparent;
   cursor: pointer;
+  display: block;
 }
 
 .list-reset {
@@ -40,14 +41,14 @@ a {
 .project__link {
   display: block;
   border-radius: 14px;
-  padding: 24px 0;
+  padding: clamp(17px, 3vw, 24px) 0;
   background: #5970f6;
   text-align: center;
   width: 100%;
   border: 1px solid #5970f6;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: clamp(14px, 2.5vw, 20px);
   text-transform: capitalize;
   color: #fff;
   transition: all 0.2s linear;
@@ -83,17 +84,18 @@ a {
 }
 
 .project__padding {
-  padding: 100px 0;
+  padding: clamp(80px, 8vw, 100px) 0;
 }
 
 .project__title {
-  font-weight: 700;
-  font-size: 62px;
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 62px);
   text-transform: uppercase;
   text-align: center;
   color: #222324;
 
   & b {
     color: #5970f6;
+    font-weight: inherit;
   }
 }

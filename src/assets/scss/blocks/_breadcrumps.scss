@@ -5,6 +5,10 @@
     letter-spacing: -0.01em;
     color: #989898;
     margin-top: 60px;
+
+    @include for-desktop{
+        display: none;
+    }
 }
 
 .breadcrumps__inner {
